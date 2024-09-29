@@ -1,0 +1,170 @@
+/* General Reset and Body Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa; /* Light gray for the entire page */
+  color: #2c3e50; /* Dark slate gray text color */
+}
+
+/* Header Styles */
+.header {
+  background-color: #00796b; /* Teal for the header */
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1; /* Remove extra line spacing */
+}
+
+/* Dashboard Layout */
+.dashboard {
+  display: flex;
+  height: calc(100vh - 70px); /* Adjust height for the header */
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 250px; /* Fixed width for sidebar */
+  background-color: #ffffff; /* White background for sidebar */
+  padding: 1.5rem;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar:hover {
+  width: 260px; /* Slightly expand sidebar on hover */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0; /* Remove padding */
+}
+
+.sidebar ul li {
+  margin: 0; /* Remove margin to eliminate spacing */
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #00796b; /* Teal link color */
+  font-weight: 500;
+  padding: 0.5rem 1rem; /* Adjust padding if necessary */
+  border-radius: 8px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition */
+  display: block; /* Make the entire area clickable */
+}
+
+.sidebar ul li a:hover {
+  background-color: #b2dfdb; /* Light teal background on hover */
+  color: #004d40; /* Darker teal on hover */
+}
+
+/* Main Content Styles */
+.main-content {
+  flex-grow: 1;
+  padding: 2rem;
+  background-color: #f9f9f9; /* Light grey background for content area */
+  overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+/* Section Styles */
+.metrics, .recent-activities {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: 12px; /* More pronounced rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Deeper shadow for depth */
+  background-color: #ffffff; /* White background for sections */
+}
+
+h2 {
+  margin-bottom: 0.5rem; /* Reduce margin to eliminate spacing */
+  font-size: 1.5rem;
+  color: #2c3e50; /* Dark slate gray for section headers */
+  line-height: 1; /* Remove extra line spacing */
+}
+
+/* Progress Bar Styles */
+#progress {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #00796b; /* Teal border for the progress container */
+  border-radius: 8px; /* Rounded corners for the progress bar */
+  background-color: #e0f2f1; /* Very light teal background for the progress */
+}
+
+/* Recent Activities List Styles */
+#recentActivities {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#recentActivities li {
+  background-color: #ffe0b2; /* Light coral for list items */
+  padding: 0.5rem; /* Reduced padding for list items */
+  margin-bottom: 0.5rem; /* Reduce margin to eliminate spacing */
+  border-radius: 8px; /* Rounded corners */
+  transition: background-color 0.3s;
+}
+
+#recentActivities li:hover {
+  background-color: #ffcc80; /* Slightly darker coral on hover */
+}
+
+/* Button Styles */
+button {
+  padding: 0.5rem 1.5rem;
+  background-color: #ffc107; /* Solid golden yellow for buttons */
+  color: white;
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+button:hover {
+  background-color: #e0a800; /* Darker yellow on hover */
+}
+
+/* Logout Button Styles */
+#logoutBtn {
+  padding: 0.5rem 1.5rem;
+  background-color: #b2dfdb; /* Solid red for logout */
+  color: black;
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+#logoutBtn:hover {
+  background-color: #b2dfdb; /* Darker red on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%; /* Sidebar takes full width on smaller screens */
+    position: relative; /* Positioned relative for better stacking */
+  }
+
+  .dashboard {
+    flex-direction: column; /* Stack sidebar above main content */
+    height: auto; /* Allow height to adjust automatically */
+  }
+
+  .main-content {
+    padding: 1rem; /* Reduced padding on smaller screens */
+  }
+}
